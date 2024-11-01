@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
+<PhoronixTestSuite>
+  <SuiteInformation>
+    <Title>highsuite</Title>
+    <Version>1.0.0</Version>
+    <TestType>Other</TestType>
+    <Description>high load suite</Description>
+    <Maintainer>anonym</Maintainer>
+  </SuiteInformation>
+  <Execute>
+    <Test>pts/nginx-3.0.1</Test>
+    <Arguments>-c 100</Arguments>
+    <Description>Connections: 100</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-3.0.0</Test>
+    <Arguments>-c 100</Arguments>
+    <Description>Concurrent Requests: 100</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.15.0</Test>
+    <Arguments>-s 100 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.4.0</Test>
+    <Arguments>-t get -c 1000</Arguments>
+    <Description>Test: GET - Parallel Connections: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/memcached-1.2.0</Test>
+    <Arguments>--ratio=1:5</Arguments>
+    <Description>Set To Get Ratio: 1:5</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/iperf-1.2.0</Test>
+    <Arguments>-c localhost -p 5201 -t 30  -P 10</Arguments>
+    <Description>Server Address: localhost - Server Port: 5201 - Duration: 30 Seconds - Test: TCP - Parallel: 10</Description>
+  </Execute>
+</PhoronixTestSuite>

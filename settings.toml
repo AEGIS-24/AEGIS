@@ -1,0 +1,8 @@
+name = "AEGIS"
+model = "gpt-4o"
+probes-pickle-path = "./probes.pickle"
+iter-when-fail = 3
+
+[kernel-find]
+kernel-folder = "../kernelsrc/"
+script-folder = "./kernel-find"
